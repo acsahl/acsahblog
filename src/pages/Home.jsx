@@ -62,7 +62,9 @@ export default function Home() {
             <p className="empty">
               {posts.length === 0
                 ? 'No posts yet. Add your first one to src/posts.'
-                : `No other posts in ${category} yet.`}
+                : category === 'All'
+                  ? 'No other posts yet.'
+                  : `No other posts in ${category} yet.`}
             </p>
           )}
         </div>
