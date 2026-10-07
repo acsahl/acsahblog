@@ -17,6 +17,7 @@ import Post from './pages/Post.jsx'
 import Archive from './pages/Archive.jsx'
 import About from './pages/About.jsx'
 import Terms from './pages/Terms.jsx'
+import Thinkbox from './pages/Thinkbox.jsx'
 import NotFound from './pages/NotFound.jsx'
 
 createRoot(document.getElementById('root')).render(
@@ -29,6 +30,7 @@ createRoot(document.getElementById('root')).render(
           <Route path="archive" element={<Archive />} />
           <Route path="about" element={<About />} />
           <Route path="terms" element={<Terms />} />
+          <Route path="thinkbox" element={<Thinkbox />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

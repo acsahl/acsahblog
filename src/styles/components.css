@@ -507,7 +507,7 @@
   font-size: 0.75rem;
 }
 
-/* ---------- Page headings (post, archive, terms, about, 404) ---------- */
+/* ---------- Page headings (post, archive, terms, thinkbox, about, 404) ---------- */
 
 .page-head,
 .post-head {
@@ -706,6 +706,67 @@
   font-size: 1.25rem;
   line-height: 1.35;
   text-wrap: pretty;
+}
+
+/* ---------- Thinkbox ---------- */
+
+/* The notes sit straight on the grid paper, like a pinboard. */
+.thinkbox {
+  display: grid;
+  gap: 20px;
+  padding-bottom: 72px;
+}
+
+.thought {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 22px 26px 16px;
+  border: var(--border);
+  border-radius: var(--radius);
+  background: var(--tint, var(--butter));
+}
+
+.thought__date,
+.thought__sources {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.thought__idea {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 1.75rem;
+  line-height: 1.15;
+  text-wrap: balance;
+}
+
+.thought__notes {
+  display: grid;
+  gap: 0.8em;
+  max-width: 62ch;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.thought__sources {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 20px;
+}
+
+.thought__sources a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  text-underline-offset: 4px;
+}
+
+.thought__sources a:hover {
+  text-decoration-thickness: 3px;
 }
 
 /* ---------- Smaller screens ---------- */
