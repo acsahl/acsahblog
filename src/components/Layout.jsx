@@ -38,6 +38,9 @@ export default function Layout() {
             <NavLink className="nav__link" to="/archive">
               All posts
             </NavLink>
+            <NavLink className="nav__link" to="/terms">
+              Terms
+            </NavLink>
             <Link className="btn btn--plain" to="/archive#search">
               Search
             </Link>
@@ -65,6 +68,9 @@ export default function Layout() {
             </Link>
             <Link className="nav__link" to="/archive">
               All posts
+            </Link>
+            <Link className="nav__link" to="/terms">
+              Terms
             </Link>
             {site.links.map((link) => (
               <a className="nav__link" key={link.href} href={link.href}>
