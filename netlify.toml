@@ -1,0 +1,16 @@
+# Settings Netlify reads when it builds and serves the blog.
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# The site handles its own addresses, so every address serves index.html.
+# Without this, opening a link straight to a post would show Netlify's
+# "Page not found".
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
