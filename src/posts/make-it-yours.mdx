@@ -1,0 +1,34 @@
+export const meta = {
+  title: 'Changing the name, bio and links',
+  date: '2026-10-07',
+  category: 'Notes',
+  excerpt: 'One file holds the blog name, your bio, the About page and the footer links.',
+}
+
+Everything about the blog that is not a post lives in `src/site.config.js`. Open it and you will find:
+
+- **name** is the text in the browser tab.
+- **logo** is the wordmark in the top-left corner.
+- **tagline** is the line under your name on the About page.
+- **author** holds your name, your photo and the short bio on the homepage.
+- **about** is the text of the About page, one entry for each paragraph.
+- **links** are the links in the footer and on the About page.
+
+## Add your photo
+
+Until you add one, the round badge shows the first letter of your name. To use a photo, put it in `src/assets`, then import it at the top of the config file and set it as `photo`:
+
+```js
+import photo from './assets/me.jpg'
+
+export const site = {
+  author: {
+    name: 'Acsah',
+    photo: photo,
+  },
+}
+```
+
+## Change the fonts
+
+The three fonts are set at the top of `src/styles/tokens.css`. The headline font is called `--serif`, the main font is `--sans` and the small label font is `--mono`.

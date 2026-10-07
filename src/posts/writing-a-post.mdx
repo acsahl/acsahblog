@@ -1,0 +1,40 @@
+export const meta = {
+  title: 'How to write a new post',
+  date: '2026-10-07',
+  category: 'Code',
+  excerpt: 'Add one file to the posts folder and it shows up on the site.',
+}
+
+A post is one file in `src/posts`. The file name becomes the address, so `my-first-post.mdx` is served at `/posts/my-first-post`.
+
+## The top of the file
+
+Every post starts with a short block that describes it:
+
+```js
+export const meta = {
+  title: 'My first real post',
+  date: '2026-10-12',
+  category: 'Life',
+  excerpt: 'One or two sentences that show up on the homepage.',
+}
+```
+
+- `date` is written year, month, day. Posts are sorted by it, newest first.
+- `category` has to match a name in `src/site.config.js`.
+- Add `featured: true` to put a post in the big slot at the top of the homepage. If no post has it, the newest post goes there.
+
+## The writing itself
+
+Below that block, write in Markdown. A blank line starts a new paragraph. Two pound signs make a heading, asterisks make text **bold** or *italic*, and backticks mark `code`.
+
+Code blocks get colors when you name the language:
+
+```python
+def greet(name):
+    return f"Hello, {name}"
+```
+
+## See it before you publish
+
+Run `npm run dev` in the project folder and open the address it prints. The page updates each time you save.

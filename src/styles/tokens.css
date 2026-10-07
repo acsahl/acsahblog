@@ -1,0 +1,38 @@
+/* The blog's colors, fonts and sizes. Change a value here and it changes everywhere. */
+:root {
+  --paper: #fdfdfb;
+  --white: #ffffff;
+  --ink: #1a1a1a;
+  --muted: #5a5a5a;
+  --grid-line: #e7e5df;
+
+  --pink: #f6b8ce;
+  --blue: #b6dce7;
+  --green: #bbd190;
+  --butter: #f5de8a;
+
+  --serif: 'DM Serif Display', Georgia, 'Times New Roman', serif;
+  --sans: 'Bricolage Grotesque Variable', system-ui, sans-serif;
+  --mono: 'DM Mono', ui-monospace, 'SFMono-Regular', monospace;
+
+  --border: 1.5px solid var(--ink);
+  --radius: 14px;
+  --grid-size: 24px;
+  --gutter: clamp(16px, 5vw, 56px);
+  --page-width: 1180px;
+  --reading-width: 760px;
+}
+
+/* Category colors. An element with one of these classes reads var(--tint). */
+.tint-pink {
+  --tint: var(--pink);
+}
+.tint-blue {
+  --tint: var(--blue);
+}
+.tint-green {
+  --tint: var(--green);
+}
+.tint-butter {
+  --tint: var(--butter);
+}

@@ -1,0 +1,30 @@
+export const meta = {
+  title: 'Turning on the newsletter sign-up',
+  date: '2026-10-07',
+  category: 'Projects',
+  excerpt: 'The sign-up form is built but switched off until you connect a newsletter service.',
+}
+
+The pink band on the homepage has an email form. Right now it is switched off and says so, because it has nowhere to send addresses yet.
+
+## Switch it on
+
+1. Pick a newsletter service and create an account.
+2. In its settings, find the embeddable sign-up form. Copy the address the form sends to. It is the `action` value in the form code they give you.
+3. Paste it into `src/site.config.js`:
+
+```js
+newsletter: {
+  pitch: 'Get new posts in your inbox',
+  formAction: 'paste the address here',
+  emailField: 'email',
+},
+```
+
+4. If the service's form code uses a different name for the email box, set `emailField` to match.
+
+Once `formAction` is filled in, the form starts working and a **Subscribe** button appears in the top bar.
+
+## Change the headline
+
+`pitch` is the big line above the form. Say what people get and how often.
